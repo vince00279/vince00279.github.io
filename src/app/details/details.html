@@ -1,0 +1,68 @@
+<div class="container" *ngIf="housingLocation">
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-item" (click)="goBack()" style="cursor: pointer;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19 12H5M12 19L5 12L12 5" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Back to collection</span>
+    </div>
+  </nav>
+
+  <div class="content-wrapper">
+    <!-- Left Content Section -->
+    <div class="content-section" *ngIf="housingLocation">
+      <!-- Product Title and Meta -->
+      <div class="housing-info">
+        <span class="brand-chip">{{ housingLocation.brand }}</span>
+        <h1 class="housing-title">{{ housingLocation.name }}</h1>
+        <div class="location">
+          <span>{{ housingLocation.category }}</span>
+          <span class="divider-dot"></span>
+          <span>{{ housingLocation.colorway }}</span>
+        </div>
+        <p class="price-tag">{{ housingLocation.price }}</p>
+      </div>
+
+      <!-- About Section -->
+      <div class="about-section">
+        <h2 class="about-title">Product highlights</h2>
+        <div class="about-details">
+          <p><strong>Available sizes:</strong> {{ housingLocation.availableSizes.join(', ') }}</p>
+          <p><strong>Waterproof membrane:</strong> {{ housingLocation.waterproof ? 'Yes' : 'No' }}</p>
+          <p><strong>Sustainable materials:</strong> {{ housingLocation.sustainable ? 'Certified' : 'Not listed' }}</p>
+        </div>
+      </div>
+
+      <!-- Application Form -->
+      <div class="application-section">
+        <h2 class="application-title">Reserve your size</h2>
+        <form class="application-form">
+          <div class="form-group">
+            <label class="form-label">Full name</label>
+            <input type="text" class="form-input" placeholder="Alex Taylor">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-input" placeholder="you@email.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Preferred size</label>
+            <input type="text" class="form-input" placeholder="Medium">
+          </div>
+          <button type="submit" class="apply-button">Notify me</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Right Image Section -->
+    <div class="image-section" *ngIf="housingLocation">
+      <img 
+        [src]="housingLocation.photo" 
+        [alt]="'Product photo of ' + housingLocation.name"
+        class="housing-image"
+        crossorigin
+      />
+    </div>
+  </div>
+</div>

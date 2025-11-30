@@ -1,0 +1,209 @@
+.container {
+  min-height: 100vh;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.nav {
+  padding: 20px 40px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #8B5CF6;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.content-wrapper {
+  display: flex;
+  min-height: calc(100vh - 80px);
+}
+
+.content-section {
+  flex: 2;
+  padding: 40px;
+  max-width: 800px;
+}
+
+.image-section {
+  flex: 1;
+  background-color: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.housing-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  max-height: 600px;
+}
+
+.housing-info {
+  margin-bottom: 40px;
+}
+
+.brand-chip {
+  display: inline-flex;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #EEF2FF;
+  color: #4C1D95;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.housing-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 12px 0;
+  line-height: 1.2;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #374151;
+  font-size: 16px;
+}
+
+.divider-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #C7D2FE;
+  display: inline-flex;
+}
+
+.price-tag {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-top: 16px;
+}
+
+.about-section {
+  margin-bottom: 40px;
+}
+
+.about-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #8B5CF6;
+  margin: 0 0 16px 0;
+}
+
+.about-details {
+  color: #374151;
+  line-height: 1.6;
+}
+
+.about-details p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.application-section {
+  margin-bottom: 40px;
+}
+
+.application-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 24px 0;
+}
+
+.application-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 400px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #8B5CF6;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-input {
+  padding: 12px 0;
+  border: none;
+  border-bottom: 2px solid #e5e7eb;
+  background: transparent;
+  font-size: 16px;
+  color: #111827;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+  border-bottom-color: #8B5CF6;
+}
+
+.form-input::placeholder {
+  color: #8B5CF6;
+  font-weight: 500;
+}
+
+.apply-button {
+  background-color: #8B5CF6;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 8px;
+  align-self: flex-start;
+}
+
+.apply-button:hover {
+  background-color: #7C3AED;
+}
+
+.apply-button:active {
+  background-color: #6D28D9;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+  
+  .image-section {
+    order: -1;
+    min-height: 300px;
+  }
+  
+  .content-section {
+    padding: 20px;
+  }
+  
+  .housing-title {
+    font-size: 2rem;
+  }
+}
